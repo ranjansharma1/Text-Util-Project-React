@@ -57,7 +57,7 @@ function App() {
   };
 
   return (
-    <Router >
+    <Router basename="/Text-Util-Project-React">
       <Navbar
         title="TEXT-Utils"
         about="about us"
@@ -67,7 +67,7 @@ function App() {
         colorMode={colorMode}
       />
       <Alert alert={alert} />
-      <Routes>
+      <Routes >
         <Route exact
           path="/"
           element={
