@@ -57,7 +57,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="Text-Util-Project-React">
       <Navbar
         title="TEXT-Utils"
         about="about us"
@@ -68,8 +68,8 @@ function App() {
       />
       <Alert alert={alert} />
       <Routes>
-        <Route
-          path="/"
+        <Route exact
+          path="/Text-Util-Project-React"
           element={
             <TextForms
               heading="Enter the text to analyze!"
