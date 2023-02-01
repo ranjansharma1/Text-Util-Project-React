@@ -7,11 +7,15 @@ export default function About(props) {
     border: "1px solid",
     borderColor: props.mode==="light"?"black":"white",    
   };
+  let myStyle2={
+    color: props.mode==="light"?"black":"white",
+    backgroundColor: props.mode==="light"?"#fcfbff":"rgb(98 98 98)",
+  }
 
 
   return (
     <div className="container my-3" >
-      <h2 style={{color:"#ff6000"}}>About Us</h2>
+      <h2 style={{color: props.mode==="light"?"black":"white"}}>About Us</h2>
       <div className="accordion" id="accordionExample">
         <div className="accordion-item">
           <h2 className="accordion-header" id="headingOne">
@@ -20,7 +24,7 @@ export default function About(props) {
             </button>
           </h2>
           <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div className="accordion-body" style={{backgroundColor:'#5e5f607d'}}>
+            <div className="accordion-body" style={myStyle2}>
               Text Utils give you a different way to restructire your text and make it most readable.
               It will help you to make your text more readable and easy to read.
             </div>
@@ -33,7 +37,7 @@ export default function About(props) {
             </button>
           </h2>
           <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div className="accordion-body" style={{backgroundColor:'#5e5f607d'}}>
+            <div className="accordion-body" style={myStyle2}>
               It is totaly Free to Use , So you can take your text and make it easy to read.
             </div>
           </div>
@@ -45,7 +49,7 @@ export default function About(props) {
             </button>
           </h2>
           <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample" >
-            <div className="accordion-body" style={{backgroundColor:'#5e5f607d'}}>
+            <div className="accordion-body" style={myStyle2}>
               Name: Ranjan Sharma
               <br/>
               Address: Gate 1, Near hotel Tarachandi, Madras, India-526413 
