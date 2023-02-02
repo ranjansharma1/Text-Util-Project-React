@@ -5,6 +5,7 @@ import About from "./components/About";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
 import { BrowserRouter as Router, Route, Routes,} from "react-router-dom";
+import ColorState from "./context/ColorState";
 
 function App() {
   const [darkMode, setdarkMode] = useState("light");
@@ -57,6 +58,7 @@ function App() {
   };
 
   return (
+    <ColorState>
     <Router basename="/Text-Util-Project-React">
       <Navbar
         title="TEXT-Utils"
@@ -81,6 +83,8 @@ function App() {
         <Route path="/about" element={<About mode={darkMode} />} />
       </Routes>
     </Router>
+    
+    </ColorState>
   );
 }
 //Default help us to by default run the funtion

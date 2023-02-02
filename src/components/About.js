@@ -1,6 +1,9 @@
 import React from "react";
+import { useContext } from "react";
+import colorContext from "../context/colorContext";
 
 export default function About(props) {
+  const a= useContext(colorContext)
   let myStyle = {
     color: props.mode==="light"?"black":"white",
     backgroundColor: props.mode==="light"?"white":"#3d3d3d",
@@ -58,6 +61,10 @@ export default function About(props) {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+
+        <h1>This is {a.class}</h1>
       </div>
     </div>
   );
